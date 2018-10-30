@@ -1,20 +1,12 @@
 class Api::V1::WeatherController < ApplicationController
 
   def index
-    latitude = params[:lat]
-    longitude = params[:lng]
-    time = params[:date]
+    lat = params[:lat]
+    long = params[:lng]
+    date = params[:date]
 
-    conn = Faraday.new(url: "https://api.darksky.net") do |faraday|
-      faraday.adapter Faraday.default_adapter
-    end
-  
-    response = conn.get("/forecast/#{ENV["dark_sky_key"]}/#{latitude},#{longitude},#{time}")
-    results = JSON.parse(response.body, symbolize_names: true)[:daily][:data]
-    
-    weather = Weather.new(results[0])
+    presenter = WeatherPresenter.new(lat, long, date)
 
-    render json: weather
+    render json: presenter.weather
   end
-
 end
