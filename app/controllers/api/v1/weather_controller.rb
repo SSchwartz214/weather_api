@@ -9,10 +9,12 @@ class Api::V1::WeatherController < ApplicationController
       faraday.adapter Faraday.default_adapter
     end
   
-    response = conn.get("/forecast/#{ENV["dark_sky_key"]}/42.3601,-71.0589,2019-04-02T01:30:00Z")
+    response = conn.get("/forecast/#{ENV["dark_sky_key"]}/#{latitude},#{longitude},#{time}")
     results = JSON.parse(response.body, symbolize_names: true)[:daily][:data]
     
     weather = Weather.new(results[0])
+
+    render json: weather
   end
 
 end
