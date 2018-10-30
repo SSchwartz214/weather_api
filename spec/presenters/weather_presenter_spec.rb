@@ -17,6 +17,7 @@ describe WeatherPresenter do
 
       expect(presenter.weather).to be_a(Weather)
       expect(presenter.weather.summary).to be_a(String)
+      expect(presenter.weather.icon).to be_a(String)
       expect(presenter.weather.precip).to be_a(Float)
       expect(presenter.weather.high).to be_a(Float)
       expect(presenter.weather.low).to be_a(Float)

@@ -12,6 +12,8 @@ describe "Weather API" do
     
     expect(weather).to have_key(:summary)
     expect(weather[:summary]).to be_a(String)
+    expect(weather).to have_key(:icon)
+    expect(weather[:icon]).to be_a(String)
     expect(weather).to have_key(:precip)
     expect(weather[:precip]).to be_an(Float)
     expect(weather).to have_key(:high)

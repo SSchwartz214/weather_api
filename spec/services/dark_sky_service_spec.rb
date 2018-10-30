@@ -19,6 +19,8 @@ describe DarkSkyService do
       expect(raw_weather).to be_a(Hash)
       expect(raw_weather).to have_key(:summary)
       expect(raw_weather[:summary]).to be_a(String)
+      expect(raw_weather).to have_key(:icon)
+      expect(raw_weather[:icon]).to be_a(String)
       expect(raw_weather).to have_key(:precipProbability)
       expect(raw_weather[:precipProbability]).to be_a(Float)
       expect(raw_weather).to have_key(:temperatureHigh)
