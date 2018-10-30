@@ -9,7 +9,7 @@ describe "Weather API" do
     expect(response).to be_successful
 
     weather = JSON.parse(response.body, symbolize_names: true)
-
+    
     expect(weather).to have_key(:summary)
     expect(weather[:summary]).to be_a(String)
     expect(weather).to have_key(:precip)
