@@ -32,9 +32,10 @@ visit 'localhost:3000' in your browser
 $ rspec
 ```
 
-* Production Link
-
+* Production Link:
+```
 [Event Mapper Weather API](https://event-mapper-weather.herokuapp.com/)
+```
 
 ## API Endpoints
 
