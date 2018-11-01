@@ -1,4 +1,5 @@
 # Event Mapper Weather API
+[![Build Status](https://travis-ci.com/SSchwartz214/weather_api.svg?branch=master)](https://travis-ci.com/SSchwartz214/weather_api)
 
 ## Description
 
