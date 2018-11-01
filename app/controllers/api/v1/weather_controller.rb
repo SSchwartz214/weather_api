@@ -1,5 +1,4 @@
 class Api::V1::WeatherController < ApplicationController
-
   def index
     lat = params[:lat]
     long = params[:lng]
