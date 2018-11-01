@@ -5,7 +5,6 @@ describe "Weather API" do
 
     get "/api/v1/weather?lat=42.3601&lng=-71.0589&date=2019-04-02T01:30:00Z"
 
-
     expect(response).to be_successful
 
     weather = JSON.parse(response.body, symbolize_names: true)
