@@ -1,24 +1,54 @@
-# README
+# Event Mapper API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+This is a microservice API that supplies weather conditions for the location of events on [Event Mapper](https://event-mapper-fe.herokuapp.com/), an app that locates and displays events hosted by Ticket Master on a map.  The user can then add events to their watchlist to view and purchase tickets to at a later date.
 
-* Ruby version
 
-* System dependencies
+## Rails version: 5.1.6
 
-* Configuration
+## Configuration
 
-* Database creation
+* Clone the repository:
+```
+git clone https://github.com/SSchwartz214/event_mapper_weather_api.git
+```
 
-* Database initialization
+* Setup:
+```
+$ bundle install
+$ bundle update
+$ rake db:{create,migrate}
+```
+
+* To view locally:
+```
+$ rails s
+visit 'localhost:3000' in your browser
+```
 
 * How to run the test suite
+```
+$ rspec
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+* Production Link
 
-* Deployment instructions
+[Event Mapper Weather API](https://event-mapper-weather.herokuapp.com/)
 
-* ...
+## API Endpoints
+
+### Weather:
+
+* GET /api/v1/weather/[latitude],[longitude],[time]
+  * Returns weather conditions for the specified location and time
+    * example request url: 
+    ```
+    /api/v1/weather?lat=42.3601&lng=-71.0589&date=2019-04-02T01:30:00Z
+    ```
+   
+ ## Contributors
+
+* Seth Schwartz: https://github.com/SSchwartz214
+* Paul Kim: https://github.com/sojurner
+* Joel O'Connor: https://github.com/JoOCon
