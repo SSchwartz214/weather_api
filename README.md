@@ -1,4 +1,4 @@
-# Event Mapper API
+# Event Mapper Weather API
 
 ## Description
 
