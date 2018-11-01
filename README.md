@@ -33,9 +33,7 @@ $ rspec
 ```
 
 * Production Link:
-```
-[Event Mapper Weather API](https://event-mapper-weather.herokuapp.com/)
-```
+  [Event Mapper Weather API](https://event-mapper-weather.herokuapp.com/)
 
 ## API Endpoints
 
